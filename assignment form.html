@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigtnment Form</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container"><br>
+        <h1 class="text-success text-center"> The Validation Form</h1><br>
+        <div class="col-lg-8 m-auto d-block">
+            <form action="#" onsubmit="return validation()" style="background-color: lightgrey;">
+
+
+                <div class="form-group">
+                    <label> userNAme : </label>
+                    <input type="text" name="userNAme" class="form-control" id="userNAme">
+                    <span id="user" class="text-danger font-weight-bold"></span>
+                </div>
+
+                <div class="form-group">
+                    <label> Password : </label>
+                    <input type="password" name="Password" class="form-control" id="password">
+                    <span id="pass"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label> email : </label>
+                    <input type="text" name="email" class="form-control" id="email">
+                    <span id="mail"> </span>
+                </div>
+
+
+                <div class="form-group">
+                    <label> MobileNo : </label>
+                    <input type="number" name="MobileNo" class="form-control" id="MobileNo">
+                    <span id="mobile"></span>
+                </div>
+                <br>
+                <input type="submit" name="submit" value="submit" class="btn btn-success">
+        </div>
+        </form>
+    </div>
+
+<script>
+    
+    function validation() {
+    let userNAme = document.getElementById('userName').value;
+    if (userNAme == "") {
+        document.getElementById('user').innerText = "**fill the above field";
+        return false;
+    }
+}
+</script>
+</body>
+
+</html>
